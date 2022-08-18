@@ -95,4 +95,8 @@ class InferFeatsTransform(Transform):
         return example
 
     def _repr_args(self):
-        return ''
+        """Return str represent key arguments for class."""
+        return '{}={}, {}={}'.format(
+            'reversible_tokenization', self.reversible_tokenization,
+            'prior_tokenization', self.prior_tokenization
+        )
